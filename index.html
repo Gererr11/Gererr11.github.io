@@ -1,22 +1,24 @@
 <html>
+ <html lang="en">
  <head>
   <title>My page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  </head>
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <style>
 body {background-color: C9C1C1;}
-h1   {color: 000000;
+h1   {color: #000000;
      font-family: Garamond, serif;
      font-size: 250%;
      border-style: solid;
      border-color: #660000;
      text-align: center;
      }
-p    {color: 2F0909;
+p    {color: #2F0909;
      font-family: Garamond, serif;
      font-size: 150%;
      }
-h2   {color: 000000;
+h2   {color: #000000;
      font-family: Garamond, serif;
      font-size: 200%;
      border-style: solid;
@@ -43,10 +45,22 @@ h2   {color: 000000;
   .container {
   padding: 10px 40px;
   position: relative;
-  background-color: #C9C1C1;
+  background-color: inherit;
   width: 50%;
 }
-  .container::after {
+.left {
+  left: -50%;
+}
+.right {
+  left: 0;
+}
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+.container::after {
   content: '';
   position: absolute;
   width: 25px;
@@ -58,65 +72,12 @@ h2   {color: 000000;
   border-radius: 50%;
   z-index: 1;
 }
-.left {
-  left: -50%;
-}
-.right {
-  left: 0;
-}
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
-}
-.right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-}
-.right::after {
-  left: -16px;
-}
-.content {
-  padding: 20px 30px;
-  background-color: white;
-  position: relative;
-  border-radius: 6px;
-}
-.timeline::after {
-  left: 31px;
-  }
-.container {
-  width: 100%;
-  padding-left: 70px;
-  padding-right: 25px;
-  }
-.container::before {
-  left: 60px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-  }
-.left::after, .right::after {
-  left: 15px;
-  }
-.right {
-  left: 0%;
-  }
+.left::after {
+      right: -17px;
+    }
+    .right::after {
+      left: -17px;
+    }
 </style>
 <body>
 <h1>Tere!</h1>

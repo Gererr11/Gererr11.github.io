@@ -33,154 +33,146 @@ h2   {color: #000000;
   box-sizing: border-box;
 } 
    
-.timeline {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-}
-  .timeline::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: #483C32;
-  top: 0px;
-  bottom: 0px;
-  left: 50%;
-  margin-left: -3px;
-}
-  .container {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
-}
-   
-.left {
-  left: -10%;
-}
-   
-.right {
-  left: 50%;
-}
-   
-.content {
-  padding: 20px 30px;
-  background-color: white;
-  position: relative;
-  border-radius: 6px;
-}
-   
-.container::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: #483C32;
-  border: 4px solid #C9C1C1;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
-}
-   
-.left {
-  left: -10%;
-}
-   
-.right {
-  left: 50%;
-}
-   
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
-}
-   
-.right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-}
-   
-.right::after {
-  left: -16px;
-}
-   
-@media screen and (max-width: 600px) {
- .timeline::after {
-  left: 31px;
-}
- 
-.container {
-  width: 100%;
-  padding-left: 70px;
-  padding-right: 25px;
-}
- 
-  .container::before {
-  left: 60px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-}
- 
-  .left::after, .right::after {
-  left: 15px;
-}
- 
-  .right {
-  left: 0%;
-}
- 
- th {
-  background-color: rgba(102, 0, 0, 1);
-  font-family: Garamond, serif;
-  font-size: 25px;
-}
- 
- td {
-  font-family: Garamond, serif;
-  font-size: 18px;
- }
-
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #483C32;
-}
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #483C32;
+        }
 
-li {
-    float: left;
-}
+        li {
+            float: left;
+        }
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
 
-li a:hover {
-    background-color: #2F0909;
-}
+        li a:hover {
+            background-color: #2F0909;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #483C32;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .left {
+            left: -10%;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: #483C32;
+            border: 4px solid #C9C1C1;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left::before, .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            border: medium solid white;
+        }
+
+        .left::before {
+            right: 30px;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        .right::before {
+            left: 30px;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        .right::after {
+            left: -16px;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .container::before {
+                left: 60px;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+
+            .left::after, .right::after {
+                left: 15px;
+            }
+
+            .right {
+                left: 0%;
+            }
+        }
+
+        th {
+            background-color: rgba(102, 0, 0, 1);
+            font-family: Garamond, serif;
+            font-size: 25px;
+        }
+
+        td {
+            font-family: Garamond, serif;
+            font-size: 18px;
+        }
 </style>
 <body>
 <h1>Tere!</h1>

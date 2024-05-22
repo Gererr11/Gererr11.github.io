@@ -1,39 +1,42 @@
 <html>
  <html lang="en">
  <head>
-  <title>My page</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- </head>
-  <style>
-body {background-color: #C9C1C1;
-}
-   
-h1   {color: #000000;
-     font-family: Garamond, serif;
-     font-size: 250%;
-     border-style: solid;
-     border-color: #660000;
-     text-align: center;
-}
+    <title>My page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #C9C1C1;
+        }
 
-p    {color: #2F0909;
-     font-family: Garamond, serif;
-     font-size: 150%;
-}
+        h1 {
+            color: #000000;
+            font-family: Garamond, serif;
+            font-size: 250%;
+            border-style: solid;
+            border-color: #660000;
+            text-align: center;
+        }
 
-h2   {color: #000000;
-     font-family: Garamond, serif;
-     font-size: 200%;
-     border-style: solid;
-     border-color: #660000;
-}
+        p {
+            color: #2F0909;
+            font-family: Garamond, serif;
+            font-size: 150%;
+        }
 
-{
-  box-sizing: border-box;
-} 
-   
-ul {
+        h2 {
+            color: #000000;
+            font-family: Garamond, serif;
+            font-size: 200%;
+            border-style: solid;
+            border-color: #660000;
+        }
+
+        {
+            box-sizing: border-box;
+        }
+
+        ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
@@ -57,7 +60,6 @@ ul {
             background-color: #2F0909;
         }
 
-        /* Timeline */
         .timeline {
             position: relative;
             max-width: 800px;
@@ -136,7 +138,6 @@ ul {
             left: -16px;
         }
 
-        /* Media Queries */
         @media screen and (max-width: 600px) {
             .timeline::after {
                 left: 31px;
@@ -174,7 +175,33 @@ ul {
             font-family: Garamond, serif;
             font-size: 18px;
         }
-</style>
+
+        .circle-textbox {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .circle-textbox div {
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            resize: none;
+            background: transparent;
+            color: #000;
+            font-size: 16px;
+        }
+    </style>
+</head>
 <body>
 <h1>Tere!</h1>
 <p><strong>Minu isiklik lehekülg.</strong></p>
@@ -264,6 +291,8 @@ ul {
     <td></td>
   </tr>
 </table>
+<hr>
+<h2><a id="Huvid">Huvid</h2>
 
  <title>Kus ma õpin?</title>
  <p><strong><a href="https://perg.ee/">Siin ma õpin.</a></strong></p>

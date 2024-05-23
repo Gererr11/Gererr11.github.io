@@ -1,390 +1,131 @@
-<html>
- <html lang="en">
- <head>
-    <title>My page</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            background-color: #C9C1C1;
-        }
-
-        h1 {
-            color: #000000;
-            font-family: Garamond, serif;
-            font-size: 250%;
-            border-style: solid;
-            border-color: #660000;
-            text-align: center;
-        }
-
-        p {
-            color: #2F0909;
-            font-family: Garamond, serif;
-            font-size: 150%;
-        }
-
-        h2 {
-            color: #000000;
-            font-family: Garamond, serif;
-            font-size: 200%;
-            border-style: solid;
-            border-color: #660000;
-        }
-
-        {
-            box-sizing: border-box;
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #483C32;
-        }
-
-        li {
-            float: left;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover {
-            background-color: #2F0909;
-        }
-
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            background-color: #483C32;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -3px;
-        }
-
-        .container {
-            padding: 10px 40px;
-            position: relative;
-            background-color: inherit;
-            width: 50%;
-        }
-
-        .left {
-            left: -10%;
-        }
-
-        .right {
-            left: 50%;
-        }
-
-        .content {
-            padding: 20px 30px;
-            background-color: white;
-            position: relative;
-            border-radius: 6px;
-        }
-
-        .container::after {
-            content: '';
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            right: -17px;
-            background-color: #483C32;
-            border: 4px solid #C9C1C1;
-            top: 15px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        .left::before, .right::before {
-            content: " ";
-            height: 0;
-            position: absolute;
-            top: 22px;
-            width: 0;
-            z-index: 1;
-            border: medium solid white;
-        }
-
-        .left::before {
-            right: 30px;
-            border-width: 10px 0 10px 10px;
-            border-color: transparent transparent transparent white;
-        }
-
-        .right::before {
-            left: 30px;
-            border-width: 10px 10px 10px 0;
-            border-color: transparent white transparent transparent;
-        }
-
-        .right::after {
-            left: -16px;
-        }
-
-        @media screen and (max-width: 600px) {
-            .timeline::after {
-                left: 31px;
-            }
-
-            .container {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-            }
-
-            .container::before {
-                left: 60px;
-                border-width: 10px 10px 10px 0;
-                border-color: transparent white transparent transparent;
-            }
-
-            .left::after, .right::after {
-                left: 15px;
-            }
-
-            .right {
-                left: 0%;
-            }
-        }
-
-        th {
-            background-color: rgba(72, 60, 50, 1);
-            font-family: Garamond, serif;
-            font-size: 25px;
-            color: white;
-        }
-
-        td {
-            font-family: Garamond, serif;
-            font-size: 18px;
-        }
-
-        .circle-textbox {
-            width: 200px;
-            height: 200px;
-            border: 2px solid #000;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-            padding: 10px;
-            box-sizing: border-box;
-            margin: 10px;
-            background-color: white;
-        }
-
-        .circle-textbox div {
-            width: 100%;
-            height: 100%;
-            border: none;
-            outline: none;
-            resize: none;
-            background: transparent;
-            color: #000;
-            font-size: 16px;
-            font-family: Garamond, serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            line-height: 1.2;
-            box-sizing: border-box;
-        }
-
-        .circle-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        *{
-            margin: 0;
-            padding: 0;
-        }
-     
-        .first {
-            width: 45vw;
-            height: 100px;
-            background-color: #737CA1;
-            float: left;
-        }
-
-        .second {
-            width: 45vw;
-            height: 100px;
-            background-color: #B4CFEC;
-            float: right;
-        }
-
-        .clearfix::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        hr {
-            clear: both; 
-            border: none; 
-            height: 1px; 
-            background-color: rgba(255, 255, 255, 0.5); 
-            margin-top: 20px; 
-            margin-bottom: 20px;
-        }
-     
-    </style>
+<!DOCTYPE html>
+<html lang="et">
+<head>
+<title>Pojeng</title>
+<link rel="stylesheet" href="stii.css">
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+ 
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+ 
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ 
+header h1 {
+    margin: 0;
+}
+ 
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+ 
+header nav ul li {
+    margin: 0;
+}
+ 
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+ 
+main {
+    padding: 30px;
+   
+}
+ 
+section {
+    margin-bottom: 40px;
+}
+ 
+section h2 {
+    margin-top: 0;
+}
+ 
+ 
+.content {
+    display: flex;
+    align-items: flex-start;
+}
+ 
+.content img {
+    margin-right: 20px;
+}
+ 
+.text-content {
+    max-width: 600px;
+}
+ 
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+ 
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
 </head>
 <body>
-<h1>Tere!</h1>
-<p><strong>Minu isiklik lehekülg.</strong></p>
  
-<ul>
-   <li><a href="#Ajalugu">Ajalugu</a></li>
-   <li><a href="#Saavutused">Saavutused</a></li>
-   <li><a href="#Huvid">Huvid</a></li>
-   <li><a href="#Tegevused">Tegevused</a></li>
-   <li><a href="#Suur tegu">Suur tegu</a></li>
-</ul>
+<header>
+<div class="container">
+    <h1>Pojeng</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Mis on pojeng?</a></li>
+            <li><a href="#">Ajalugu</a></li>
+        </ul>
+    </nav>
+</div>
+</header>
+<main>
+<section>
+<h2>Mis on pojeng?</h2>
+<div class="content" >
  
-<hr>
-<h2><a id="Ajalugu">Ajalugu</a></h2>
-
- <div class="timeline">
-  <div class="container left">
-    <div class="content">
-      <p>Sünd 07.09.2007</p>
-    </div>
-  <img src="Images/IMG_4913.jpeg" alt="Beebi hälli sees"
-    width="400" 
-     height="300">
-  </div>
-  <div class="container right">
-    <div class="content">
-      <p>Lasteaia lõpetamine 2014 mai</p>
-    </div>
-  </div>
-  <div class="container left">
-    <div class="content">
-      <p>Põhikooli minek 01.09.2014</p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <p>I noorema õe sünd 10.09.2014</p>
-    </div>
-  </div>
-  <div class="container left">
-    <div class="content">
-      <p>II noorema õe sünd 17.11.2019</p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <p>Põhikooli lõpetamine 20.06.2023</p>
-    </div>
-   <img src="Images/IMG_4912.jpeg" alt="Inimesed seismas kooli ees" 
-    width="300" 
-     height="300"/>
-  </div>
-  <div class="container left">
-    <div class="content">
-      <p>Gümnaasiumisse minek 01.09.2024</p>
-     </div>
-  </div>
-  </div>
- <hr>
- <h2><a id="Saavutused">Saavutused</a></h2>
- <table border="1.5" style="width:75%">
-  <tr style="height:100px"> 
-    <th style="font-size: 35px;">Võistlused</th>
-    <th style="font-size: 35px;">Kooli sisesed</th>
-    <th style="font-size: 35px;">Tähtsamad</th>
-  </tr>
-  <tr style="height:100px"> 
-    <td style="font-size: 25px;">Känguru</td>
-    <td style="font-size: 25px;">Kiituskirjad</td>
-    <td style="font-size: 25px;">Maardu linna parim õpilane 2022</td>
-  </tr>
-  <tr style="height:100px"> 
-    <td style="font-size: 25px;">Matemaatikaolümpiaadid</td>
-    <td style="font-size: 25px;">Tänukirjad</td>
-    <td style="font-size: 25px;">Autokool</td>
-  </tr>
-  <tr style="height:100px"> 
-    <td style="font-size: 25px;">Emakeeleolümpiaad</td>
-    <td style="font-size: 25px;">Ürituste korraldamine ja abistamine</td>
-    <td></td>
-  </tr>
-  <tr style="height:100px"> 
-    <td style="font-size: 25px;">Geograafia võistlus</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr style="height:100px"> 
-    <td style="font-size: 25px;">Matemaatikavõistlus Naboj</td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
-<hr>
-<h2><a id="Huvid">Huvid</a></h2>
-    
-    <div class="circle-textbox">
-        <div>RAAMATUD - meeldib lugeda nii krimi- kui ka fantaasiaraamatuid vabal ajal</div>
-    </div>
-    <div class="circle-textbox">
-        <div>MUUSIKA - kuulan väga palju muusikat, enamasti popmuusikat, kuid hullult meelidib R&B</div>
-    </div>
-    <div class="circle-textbox">
-        <div>MAALIMINE - olen juba mitmeid aastaid maalinud ja tavaliselt kasutan õlivärve ning maalin puuvilju</div>
-    </div>
-    <div class="circle-textbox">
-        <div>ARVUTIMÄNGUD - minu isa tutvustas mind ja mängin erinevate žanrite mänge: näiteks RPG, adventrue, action, strategy, multi-player jne</div>
-    </div>
-    <div class="circle-textbox">
-        <div>HEEGELDAMINE - vabal ajal rahustav tegevus ja isegi loovtööks heegeldasin vaiba</div>
-    </div>
-    <div class="circle-textbox">
-        <div>SPORDIALAD - ise olen tegelenud pikemat aega võrkpalliga ja meeldib jalgrattaga sõita, kuid regulaarselt jälgin vormel 1 ja 2</div>
-    </div>
-<hr>
-
-<h2><a id="Tegevused">Tegevused</a></h2>
-
-<div class="first">
-    AUTOKOOL - alustasin 2023. aasta juulis ja lõpetasin 2024. aasta veebruaris, kuid lubasid pole veel kätte saanud
+<img src="https://i.pinimg.com/736x/13/22/f5/1322f5a7352d55b4c99dfb7a6a87df27.jpg"
+height="150"
+width="150">
+<div class="text-content">
+<p> <strong>Pojeng</strong> ehk ladina k. <em>Paeonia</em>. See on <u>rohttaimede perekond pojengiliste sugukonnast <em> Paeoniaceae,</em></u> kuhu kuulub umbes 30 liiki.</u></p>
+<p>Pojengid on rohttaimede perekond, mida tuntakse nende suurte, lopsakate ja mitmevärviliste õite poolest. Neil on tugevad varred ja rohelised lehed ning nad eelistavad päikeselist või poolvarjulist kasvukohta ning hästi kuivendatud mulda. Pojengid õitsevad tavaliselt kevadel ja suve alguses ning on vastupidavad ja taluvad külmakraade. Neil on oluline koht erinevates kultuurides, kus neid seostatakse rikkuse, õnne, armastuse ja iluga. Pojengid lisavad aedadele ja lilleseadetele elegantsi ning on pilkupüüdvad nii üksikult kui ka grupeerituna.</p>
+<a href="#">https://www.britannica.com/plant/orchid</a>
 </div>
-<div class="second">
-    RATTASÕIT - sõidan kodulinna kandis jalgrattaga enamasti nädalavahetusel, vahepeal koos väikese õega
 </div>
-
-<hr class="clearfix">
-
-<h2><a id="Suur tegu">Suur tegu</a></h2>
-
-<p><strong>Suured teos Tallinna noortele lemmik:</strong></p>
-<p>2012 Eesti Punase Risti Tallinna Seltsi projekt „Turvaliselt koju!“</p>
-
-<p><strong>Suured teos Tallinna noortele minu poolt:</strong></p>
-<p></p>
-
+</section>
+<section>
+<h2>Ajalugu</h2>
+<div class="placeholder">
+<div class="content">
+<div class="text-content">
+<p><strong> Pojengid </strong> on olnud aias kaunistuseks juba sajandeid, neid on mainitud juba antiiksetes tekstides. Nad on pärit <u><em>Euroopast, Aasiast ja Põhja-Ameerikast</em></u> ning on olnud oluline osa mitmete kultuuride aiakujunduses .</p>
+<p> Pojengide kultuuriline tähtsus ulatub ajalooliselt Hiina ja Jaapani traditsioonideni, kus neid on austatud ja neile on omistatud sügavaid tähendusi. Euroopas ja Ameerikas on pojengid olnud populaarsed aiataimed alates 18. sajandist, eriti Inglismaal ja Prantsusmaal, kus neid peeti luksuslikeks ja aristokraatlikeks taimedeks. Tänapäeval on pojengid jätkuvalt armastatud aiakultuuri osa, mida kasvatatakse nii kaunistuse kui ka meditsiiniliste ja sümbolistlike eesmärkide jaoks.</p>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container">
+<p>© 2024 Pojeng. Kontakt: <a href="mailto:email@example.com">pojeng@pojeng.com</a></p>
+</div>
+</footer>
 </body>
 </html>
